@@ -5,7 +5,7 @@ var descriptionInput = document.getElementById('description')
 var emailInput = document.getElementById('email')
 var phoneInput = document.getElementById('phone')
 // grab divs for input
-var previewParagraph = document.getElementById('raw')
+var previewParagraph = document.getElementById('preview')
 var rawHTMLParagraph = document.getElementById('html')
 // grabs values from inputs and updates the preview divs
 var updateAll = function () {
@@ -25,8 +25,8 @@ var updateAll = function () {
       '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>.' +
     '</p>'
   // show raw html and preview
-  previewParagraph.textContent = string
-  rawHTMLParagraph.innerHTML = string
+  previewParagraph.innerHTML = string
+  rawHTMLParagraph.textContent = string
 }
 // add listeners to all inputs with updateAll function
 lastNameInput.addEventListener('input', updateAll)
